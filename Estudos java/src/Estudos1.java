@@ -2,7 +2,7 @@
 public class Estudos1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int teste = 0;
 
 	}
 
