@@ -148,10 +148,10 @@ class TesteDataFabric {
 
 public class Composicao_e_agreg {
 	public static void main(String[] args) {
-		//Atleta atleta1 = new Atleta(); 
-		//atleta1.inserirdados(); 
-		//time time = new time(); 
-		//time.setCodigoTime(55);
+		Atleta atleta1 = new Atleta(); 
+		atleta1.inserirdados(); 
+		time time = new time(); 
+		time.setCodigoTime(55);
 		TesteDataFabric date = new TesteDataFabric();
 		date.data();
 		date.da();
@@ -159,11 +159,11 @@ public class Composicao_e_agreg {
 		prod1.prod();
 		prod1.setData(date);
 		prod1.det();
-//time.setNomeTime("Time X"); 
-//time.setAtleta(atleta1); 
-//System.out.println("O time é " + time.getNomeTime()); 
-//System.out.println("O nome do atleta é: " + time.getAtleta().getName()); 
-//System.out.println("Repito, o nome do atleta é: " + atleta1.getName() + time.getAtleta().getCod());
+time.setNomeTime("Time X"); 
+time.setAtleta(atleta1); 
+System.out.println("O time é " + time.getNomeTime()); 
+System.out.println("O nome do atleta é: " + time.getAtleta().getName()); 
+System.out.println("Repito, o nome do atleta é: " + atleta1.getName() + time.getAtleta().getCod());
 	}
 }
 
