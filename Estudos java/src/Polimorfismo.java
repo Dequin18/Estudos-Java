@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 
@@ -8,9 +9,9 @@ class Produto {
 	private int codigo; 
 	private double preco; 
 	private String descricao; 
-	private double frete; 
+	private char frete; 
 	
-	public void produto(String nome, int codigo, double preco, String descricao, double frete) {
+	public void produto(String nome, int codigo, double preco, String descricao, char frete) {
 		this.nome = nome;
 		this.codigo = codigo;
 		this.preco = preco;
@@ -34,10 +35,29 @@ class Produto {
 		return frete; 
 		} 
 	
+	public void Inserir() {
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("Digite a regiao");
+		frete = ler.next().charAt(0);
 	
-	public void calcularFrete(int km) { 
-		this.frete = km * 1.5; 
-		} 
+		descricao = ler.nextLine();
+	//	System.out.println("Digite o km");
+		//frete = ler.nextInt();
+		
+	}
+	
+	public void exibir() {
+		System.out.println("O valor do frete é de: " + frete);
+		calcularFrete((char) frete);
+
+		System.out.println("Descriçao do produto: " + descricao);
+	}
+	
+	//public double calcularFrete2() { 
+		
+		//return this.frete = frete * 1.5; 
+		//} 
 	
 	public void calcularFrete(char regiao) { 
 		switch (regiao) { 
@@ -112,15 +132,21 @@ public class Polimorfismo {
 		Produto livro = new livro(50, "CUlpa das estrelas");
 		Produto livro2 = new livro(30, "Odyssey");
 		carinho MeuCarrinho = new carinho();
+		livro2.Inserir();
+	
 		
+	livro2.exibir();
 	 MeuCarrinho.adi(livro);
 	 MeuCarrinho.adi(livro2);
 	 MeuCarrinho.ExibirCAr();
-		
+	
 		
 	}
 	
 }
+
+// ------------- Q,2-----------
+
 
 
 
